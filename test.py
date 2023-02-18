@@ -399,7 +399,10 @@ print "\n"
 
 
 # convert into JSON:
-y = json.dumps(fullNewsBundle)
+#y = json.dumps(fullNewsBundle)
 
 # the result is a JSON string:
-print(y)
+#print(y)
+
+response={'Price':54,'Cost':'99'}
+    print(json.JSONEncoder().encode(response))
