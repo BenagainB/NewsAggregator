@@ -1,0 +1,11 @@
+<rss>
+  <channel>
+    <title>Feed Title</title>
+    <item>
+       <link>https://codepen.io/billgil/pen/ewqWzY</link> <!-- http://gizmodo.com/vip.xml -->
+       <title>A sad rain cloud</title>
+       <dc:creator>Bill Gilmore</dc:creator>
+    </item>
+    <!-- a bunch more items -->
+  </channel>
+</rss>
