@@ -249,6 +249,18 @@
 									
 									
 								</section>
+								<section>
+									<div id="test">
+									</div>
+
+									<script>
+									 $(document).ready(function() {
+									  $.getJSON("test.py", function(data) {
+										$('#test').html("JSON Data: " + data);
+									    });
+									});
+									</script>	
+								</section>
 									
 						</div>
 					</div>
