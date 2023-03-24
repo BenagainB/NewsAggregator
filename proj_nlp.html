@@ -8,6 +8,7 @@
 	<head>
 		<title>Natural Language Processing</title>
 		<meta charset="utf-8" />
+		<link rel="icon" href="images/bbLogo.jpeg">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
@@ -22,14 +23,12 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Project</strong> Report</a>
-									<!--<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>-->
+									<a href="proj_nlp.html" class="logo"><strong>Project</strong> Report</a>
+									<ul class="icons">
+                                        <li><a href="https://www.linkedin.com/in/benjaminburbank/" target="_blank" class="icon brands fa-linkedin"></a></li>
+                                        <li><a href="https://github.com/BenagainB" target="_blank" class="icon brands fa-github"></a></li>
+										<li><a href="mailto:bburbank14@ewu.edu" class="icon solid fa-envelope"></a></li>
+                                    </ul>
 								</header>
 
 							<!-- Content -->
@@ -43,42 +42,66 @@
 									<hr class="major" />
 
 									<h2>How it started</h2>
-									<br>I requested </br>
-                                        To accomplish these goals, my plan was to:</p>
-                                    <ul>
-                                        <li>Create </li>
-                                    </ul>
-                                    
-                                    <p>I was ambitious and hoped to be able to go further with added functionality to have the website:</p>
-                                    <ul>
-                                        <li>Scanning 
-                                    </ul>
+									<p>I was listening to a UK-based politics and culture podcast when a short reference to a purportedly known fact caught my attention.
+										The podcast host asserted that one can identify the political bias of an author by his or her word choices and how frequently they use French-origin words versus German-origin words, with French on the political "Left" and German on the political "Right."
+										I had been looking for a project to start working with in familiarizing myself with <strong>Natural Language Processing (NLP)</strong> methods and decided to try and test whether the podcast host was correct or not.</p>
+									<p>Proposed initial data:<br>
+										10 articles each from 2 news outlets declared political left and right using an accepted media bias chart</p>
+									<ul>
+										<li><a href="https://www.allsides.com/media-bias/media-bias-chart" target="_blank">https://www.allsides.com/media-bias/media-bias-chart</a></li>
+										<li><a href="https://adfontesmedia.com/interactive-media-bias-chart/" target="_blank">https://adfontesmedia.com/interactive-media-bias-chart/</a></li>
+									</ul>
+
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit" style="padding: 2px"><a href="images/AllSidesMediaBiasChart-Version3.png" target="_blank"><img src="images/AllSidesMediaBiasChart-Version3.png" alt="All Sides Media Bias Chart" /></a></span></div>
+											<div class="col-1"><span class="image fit"><a href=""><img src=""/></a></span></div>
+											<div class="col-7"><span class="image fit" style="padding: 2px"><a href="images/AdFontesMediaBiasChart_5dot1.png" target="_blank"><img src="images/AdFontesMediaBiasChart_5dot1.png" alt="Ad Fontes Media Bias Chart" /></a></span></div>
+										</div>
+									</div>
+
+									<p>Proposed steps:</p>
+									<ol>
+										<li>Using the body text of each article, segregate each word or symbol.</li>
+										<li><strong>Lemmatize</strong> (normalize to base) words to isolate word roots.</li>
+										<li>Create unique-item columns for each.</li>
+										<li>Describe characteristics that differ between outlets (% and number of words used, symbols used, etc.).</li>
+										<li>Describe lemmatized word characteristics (% and number of repeated words, % and number of words by parts of speech).</li>
+										<li>Screen lemmatized words based on word root origin.</li>
+										<li>Describe root word characteristics (% and number of word origins).</li>
+										<li>Compare against media bias chart.</li>
+										<li>Expand to include outlets in intermediate categories and compare against media bias chart. (time dependent)</li>
+										<li>Expand number of articles per outlet and compare against previous results looking at stability of findings. (time dependent)</li>
+									</ol>
                                         
                                     <p>My planned deliverables were:</p>
                                     <ul>
-                                        <li>Create </li>
-                                        
+                                        <li>All of the original, format unchanged, articles used</li>
+                                        <li>A <strong>comma-separated values (csv)</strong> file with articles each taking one row and unique words, punctuation, diacritical marks, and wordcount enumerated by label</li>
+										<li>A csv file containing <strong>metadata</strong> for each of the articles including UniqueKey, Title, AuthorName, PublisherName, DatePublished, and GuidLink</li>
+										<li>A lossy csv file with punctuation and diacritical marks each aggregated under their respective data labels in columns</li>
+										<li>A lossy csv file with words lemmatized to their normalized roots</li>
+										<li>A csv with the above data, but with data labels appended with root word origin language</li>
+										<li>A report outlining interesting features found when comparing the articles, including an anlysis of the likelihood of being able to use root language of words to predict political bias of the outlet</li>
                                     </ul>
-                                        
 
 									<hr class="major" />
 
 									<h2>How it went</h2>
-									<p>Before I started the project </p>
+									<p><em>In Progress...</em></p>
                                     
                                         
 									<hr class="major" />
 
 									<h2>Current status</h2>
-									<p>I have a currently </p>
+									<p><em>In Progress...</em></p>
                                     
                                     <hr class="major" />
 
                                     <h2>Conclusions</h2>
-                                    <p>From </p>
-                                    <p>The things I've</p>
+                                    <p><em>In Progress...</em></p>
                                         
-                                    <hr class="major" />
+                                    <!--<hr class="major" />
                                     <h3>My live app:</h3>
                                     <ul style="list-style-type: none">
                                         <li><a href="http://bburbank.pythonanywhere.com/" target="_blank">http://bburbank.pythonanywhere.com/</a></li>
@@ -87,7 +110,7 @@
                                     <h3>My code:</h3>
                                     <ul style="list-style-type: none">
                                         <li><a href="https://github.com/BenagainB/rssApp_FLASK" target="_blank">https://github.com/BenagainB/rssApp_FLASK</a> </li>
-                                    </ul>
+                                    </ul>-->
 
 								</section>
 
@@ -99,11 +122,11 @@
 						<div class="inner">
 
 							<!-- Search -->
-								<section id="search" class="alt">
+								<!--<section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Search" />
 									</form>
-								</section>
+								</section>-->
 
 							<!-- Menu -->
 								<nav id="menu">
@@ -118,17 +141,18 @@
 											<ul>
 												<li><a href="proj_webscrape.html">Web Scraper / RSS</a></li>
 												<li><a href="proj_nlp.html">Natural Language Processing</a></li>
+												<li><a href="proj_csInPython.html">My Computer Science Degree - In Python</a></li>
 											</ul>
 										</li>
-										<li><a href="generic.html">Generic</a></li>
-										<li><a href="elements.html">Elements</a></li>
+										<li><a href="articles.html">Articles</a></li>
+                                    	<!--<li><a href="elements.html">Elements</a></li>
 										<li>
 											<span class="opener">Submenu</span>
 											<ul>
 												<li><a href="#">Lorem Dolor</a></li>
 												<li><a href="#">Ipsum Adipiscing</a></li>
 											</ul>
-										</li>
+										</li>-->
 										
 									</ul>
 								</nav>
@@ -136,25 +160,25 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Ante interdum</h2>
+										<h2>Articles</h2>
 									</header>
 									<div class="mini-posts">
-										<article>
+										<!--<article>
 											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
+										</article>-->
 										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											<a href="/articles.html#LettersOfRec" class="image"><img src="images/adviceOnLetters.jpeg" alt="" /></a>
+											<p>Advice on Letters of Recommendation</p>
 										</article>
 									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
+									<!--<ul class="actions">
+										<li><a href="articles.html" class="button">More</a></li>
+									</ul>-->
 								</section>
 
 							<!-- Section -->
@@ -162,7 +186,6 @@
 									<header class="major">
 										<h2>Get in touch</h2>
 									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
 									<ul class="contact">
 										<li class="icon solid fa-envelope"><a href="mailto:">bburbank14@ewu.edu</a></li>
 										<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/benjaminburbank/" target="_blank">linkedin.com/in/benjaminburbank/</a></li>

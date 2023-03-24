@@ -8,6 +8,7 @@
 	<head>
 		<title>Web Scraping Project</title>
 		<meta charset="utf-8" />
+        <link rel="icon" href="images/bbLogo.jpeg">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
@@ -22,12 +23,13 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Project</strong> Report</a>
-									<ul class="icons">
-                                        <li class="fab fa-python"></li>
-                                        <li class="icon solid fa-rss"></li>
-                                        <li class="fab fa-github"></li>
-									</ul>
+									<a href="proj_webscrape.html" class="logo"><strong>Project</strong> Report</a>
+                                    <ul class="icons">
+                                        <!--<li class="fab fa-python"></li>-->
+                                        <li><a href="https://www.linkedin.com/in/benjaminburbank/" target="_blank" class="icon brands fa-linkedin"></a></li>
+                                        <li><a href="https://github.com/BenagainB" target="_blank" class="icon brands fa-github"></a></li>
+                                        <li><a href="mailto:bburbank14@ewu.edu" class="icon solid fa-envelope"></a></li>
+                                    </ul>
 								</header>
 
 							<!-- Content -->
@@ -41,10 +43,10 @@
 									<hr class="major" />
 
 									<h2>How it started</h2>
-									<p>I requested this project to learn how to web-scrape, how Really Simple Syndication (RSS) functions as a protocol, and to improve my skills at building functional websites.
+									<p>I requested this project to learn how to web-scrape, how <strong>Really Simple Syndication (RSS)</strong> functions as a protocol, and to improve my skills at building functional websites.
                                         To accomplish these goals, my plan was to:</p>
                                     <ul>
-                                        <li>Create a WordPress web page</li>
+                                        <li>Create a <strong>WordPress</strong> web page</li>
                                         <li>Host the output from RSS feeds for news on the page</li>
                                         <li>Eliminate redundant news articles from the feed (data cleaning)</li>
                                         <li>Display feeds as either weblinks with timestamps or as "glimpses" with short summary and data showing</li>
@@ -52,8 +54,8 @@
                                     
                                     <p>I was ambitious and hoped to be able to go further with added functionality to have the website:</p>
                                     <ul>
-                                        <li>Scanning feeds using Locality Sensitive hashing to eliminate articles published by a secondary news source</li>
-                                        <li>Aggregating 2x daily feeds into "Top News" summaries using Natural Language Processing</li>
+                                        <li>Scanning feeds using <strong>Locality Sensitive Hashing</strong> to eliminate articles published by a secondary news source</li>
+                                        <li>Aggregating 2x daily feeds into "Top News" summaries using <strong>Natural Language Processing</strong></li>
                                         <li>Publishing summaries to subscribers</li>
                                         <li>Adding options for selective news types such as "political news," "economic news," etc.</li>
                                         <li>Adding options for simple search terms to gather specific news items</li>
@@ -73,13 +75,32 @@
 									<hr class="major" />
 
 									<h2>How it went</h2>
-									<p>Before I started the project I had already looked at the NewsNow.com website and how they were displaying RSS feed items as Article Title (as a link to the article), Publication Name, and Publication TimeDate. I had also started to gather /RSS and /FEED addresses to over 60 news publishers in anticipation of using several.</p>
-                                    <p>Initially, I researched how to setup a WordPress website, to I could start getting a template page online to pull information using JavaScript and display scraped information using HTML and CSS. I quickly discovered that there is a large difference between Wordpress.org and Wordpress.com. While I could (and did) setup a template WordPress (.com) page in minutes, I found out that all plugins and actions require a paid account and, if plugins that did exactly what I wanted (to scrape from a large number of sites) were not available, I would have to build my own plugin in PHP and submit the plugin to WordPress.com for review (which could take weeks) before I could use it. Similarly, WordPress.org would require extensive work in PHP to build my scraping and display functions, though WordPress.org does not have a required fee to use actions of plugins.</p>
-                                    <p>I next moved to GitHub, where I discovered that GitHub offers free hosting through GitHub Pages for one repository per account. I found a basic webpage template and created a new repository with configured settings to deploy my website. The template successfully deployed, and I used a few available services to send me pre-formatted news articles, most of which I was able to easily add to the pages, but with major drawbacks. For each of the services I could find, all had limitations in the number of articles and the number of sources they were able to provide to me and the services would not work well together. At this point, unless I decided to use several pay-to-use services from multiple outlets, my only other option was to build my own tool.</p>
-                                    <p>I moved on to attempt using a few older tutorials I'd found to try and scrape data from the publishers RSS pages directly. Nothing I tried to do worked following that thread and I was able to determine the problem was Cross-Origin Resource Sharing (CORS). Essentially, after 2018, easy scraping using JavaScript was disabled with the implementation of CORS, which blocks resource requests from any domain which is not its own (without some very extensive configurations and services).</p>
-                                    <p>This pushed me to using a full programming language with libraries built to support web-scraping, namely, Python. I found a library called lxml for Python which allowed me to leverage the requests library to scrape everything on the URL passed and then “packaged” the material as an xml object. Using this method, I was able to scrape any RSS page and somewhat successfully parse the data I needed into a dataframe (with some difficulties due to publishers not following a consistent standard for RSS pages).</p>
-                                    <p>When I went to configure my Python script to send its dataframe to my webpage I discovered that GitHub Pages are static-only and will not accept configuration as a dynamic web application. I researched several other web-hosting platforms, including Heroku, Docker, Render, and PythonAnywhere, uploading my script and attempting to publish my pages on each until I discovered that all required Python v3.5 or later and my program had been written on Python v2.7. I upgraded to Python v3.8 and attempted to run my scripts locally and lxml was entirely broken.</p>
-                                    <p>I looked for another library to use with Python v3.5 or later and found BeautifulSoup, which works much better and more reliably than lxml, and then tried to publish again. This time, I found out that I needed an application framework and not a separate traditional HTML webpage. After some research, I found out that Python has two main web frameworks; Django and Flask. After looking into both, I found that Flask is more thoroughly documented and a simpler framework to use. I setup Flask and ran my scripts in a Flask containerized virtual environment and then built a minimal web app to display my results. I was able to display all 30 of the news publishers I tried, but pruned down to 10 publishers to display on the web app, then pushed my code to my GitHub repo and linked the repo to my PythonAnywhere account and published the web app.</p>
+									<p>Before I started the project I had already looked at the <strong>NewsNow.com</strong> website and how they were displaying RSS feed items as Article Title (as a link to the article), Publication Name, and Publication TimeDate. 
+                                        I had also started to gather /RSS and /FEED addresses to over 60 news publishers in anticipation of using several.</p>
+                                    <p>Initially, I researched how to setup a WordPress website, to I could start getting a template page online to pull information using <strong>JavaScript</strong> and display scraped information using <strong>HTML</strong> and <strong>CSS</strong>. 
+                                        I quickly discovered that there is a large difference between <strong>Wordpress.org</strong> and <strong>Wordpress.com</strong>. 
+                                        While I could (and did) setup a template WordPress (.com) page in minutes, I found out that all plugins and actions require a paid account and, if plugins that did exactly what I wanted (to scrape from a large number of sites) were not available, I would have to build my own plugin in <strong>PHP</strong> and submit the plugin to WordPress.com for review (which could take weeks) before I could use it. 
+                                        Similarly, WordPress.org would require extensive work in PHP to build my scraping and display functions, though WordPress.org does not have a required fee to use actions of plugins.</p>
+                                    <p>I next moved to <strong>GitHub</strong>, where I discovered that GitHub offers free hosting through <strong>GitHub Pages</strong> for one repository per account. 
+                                        I found a basic webpage template on <strong>html5up.net</strong> and created a new repository with configured settings to deploy my website. 
+                                        The template successfully deployed, and I used a few available services to send me pre-formatted news articles, most of which I was able to easily add to the pages, but with major drawbacks. 
+                                        For each of the services I could find, all had limitations in the number of articles and the number of sources they were able to provide to me and the services would not work well together. 
+                                        At this point, unless I decided to use several pay-to-use services from multiple outlets, my only other option was to build my own tool.</p>
+                                    <p>I moved on to attempt using a few older tutorials I'd found to try and scrape data from the publishers RSS pages directly. 
+                                        Nothing I tried to do worked following that thread and I was able to determine the problem was <strong>Cross-Origin Resource Sharing (CORS)</strong>. 
+                                        Essentially, after 2018, easy scraping using JavaScript was disabled with the implementation of CORS, which blocks resource requests from any domain which is not its own (without some very extensive configurations and services).</p>
+                                    <p>This pushed me to using a full programming language with libraries built to support web-scraping, namely, <strong>Python</strong>. 
+                                        I found a library called <strong>lxml</strong> for Python which allowed me to leverage the requests library to scrape everything on the URL passed and then “packaged” the material as an <strong>xml</strong> object. 
+                                        Using this method, I was able to scrape any RSS page and somewhat successfully parse the data I needed into a dataframe (with some difficulties due to publishers not following a consistent standard for RSS pages).</p>
+                                    <p>When I went to configure my Python script to send its dataframe to my webpage I discovered that GitHub Pages are static-only and will not accept configuration as a dynamic web application. 
+                                        I researched several other web-hosting platforms, including <strong>Heroku</strong>, <strong>Docker</strong>, <strong>Render</strong>, and <strong>PythonAnywhere</strong>, uploading my script and attempting to publish my pages on each until I discovered that all required Python v3.5 or later and my program had been written on Python v2.7. 
+                                        I upgraded to Python v3.8 and attempted to run my scripts locally and lxml was entirely broken.</p>
+                                    <p>I looked for another library to use with Python v3.5 or later and found <strong>BeautifulSoup</strong>, which works much better and more reliably than lxml, and then tried to publish again. 
+                                        This time, I found out that I needed an application framework and not a separate traditional HTML webpage. 
+                                        After some research, I found out that Python has two main web frameworks; <strong>Django</strong> and <strong>Flask</strong>. 
+                                        After looking into both, I found that Flask is more thoroughly documented and a simpler framework to use. 
+                                        I setup Flask and ran my scripts in a Flask containerized virtual environment and then built a minimal web app to display my results. 
+                                        I was able to display all 30 of the news publishers I tried, but pruned down to 10 publishers to display on the web app, then pushed my code to my GitHub repo and linked the repo to my PythonAnywhere account and published the web app.</p>
                                         
 									<hr class="major" />
 
@@ -154,6 +175,7 @@
                                             <li><a href="https://render.com/docs/deploy-flask">https://render.com/docs/deploy-flask</a></li>
                                             <li><a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a></li>
                                             <li><a href="https://www.pythonanywhere.com/forums/">https://www.pythonanywhere.com/forums/</a></li>
+                                            <li><a href="https://html5up.net/">https://html5up.net/</a></li>
                                     </ul>
                                     
 								</section>
@@ -166,11 +188,11 @@
                     <div class="inner">
 
                         <!-- Search -->
-                            <section id="search" class="alt">
+                            <!--<section id="search" class="alt">
                                 <form method="post" action="#">
                                     <input type="text" name="query" id="query" placeholder="Search" />
                                 </form>
-                            </section>
+                            </section>-->
 
                         <!-- Menu -->
                             <nav id="menu">
@@ -185,43 +207,43 @@
                                         <ul>
                                             <li><a href="proj_webscrape.html">Web Scraper / RSS</a></li>
                                             <li><a href="proj_nlp.html">Natural Language Processing</a></li>
+                                            <li><a href="proj_csInPython.html">My Computer Science Degree - In Python</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="generic.html">Generic</a></li>
-                                    <li><a href="elements.html">Elements</a></li>
+                                    <li><a href="articles.html">Articles</a></li>
+                                    <!--<li><a href="elements.html">Elements</a></li>
                                     <li>
                                         <span class="opener">Submenu</span>
                                         <ul>
                                             <li><a href="#">Lorem Dolor</a></li>
                                             <li><a href="#">Ipsum Adipiscing</a></li>
                                         </ul>
-                                    </li>
-                                    
+                                    </li>--> 
                                 </ul>
                             </nav>
 
                         <!-- Section -->
                             <section>
                                 <header class="major">
-                                    <h2>Ante interdum</h2>
+                                    <h2>Articles</h2>
                                 </header>
                                 <div class="mini-posts">
-                                    <article>
+                                    <!--<article>
                                         <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
                                         <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
                                     </article>
                                     <article>
                                         <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
                                         <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                                    </article>
+                                    </article>-->
                                     <article>
-                                        <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-                                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                        <a href="/articles.html#LettersOfRec" class="image"><img src="images/adviceOnLetters.jpeg" alt="" /></a>
+                                        <p>Advice on Letters of Recommendation</p>
                                     </article>
                                 </div>
-                                <ul class="actions">
-                                    <li><a href="#" class="button">More</a></li>
-                                </ul>
+                                <!--<ul class="actions">
+                                    <li><a href="articles.html" class="button">More</a></li>
+                                </ul>-->
                             </section>
 
                         <!-- Section -->
@@ -229,7 +251,6 @@
                                 <header class="major">
                                     <h2>Get in touch</h2>
                                 </header>
-                                <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                                 <ul class="contact">
 									<li class="icon solid fa-envelope"><a href="mailto:">bburbank14@ewu.edu</a></li>
 									<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/benjaminburbank/" target="_blank">linkedin.com/in/benjaminburbank/</a></li>

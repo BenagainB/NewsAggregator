@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>My Computer Science Degree - In Python</title>
+		<meta charset="utf-8" />
+        <link rel="icon" href="images/bbLogo.jpeg">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="proj_csInPython.html" class="logo"><strong>Project</strong> Report</a>
+                                    <ul class="icons">
+                                        <!--<li class="fab fa-python"></li>-->
+                                        <li><a href="https://www.linkedin.com/in/benjaminburbank/" target="_blank" class="icon brands fa-linkedin"></a></li>
+                                        <li><a href="https://github.com/BenagainB" target="_blank" class="icon brands fa-github"></a></li>
+                                        <li><a href="mailto:bburbank14@ewu.edu" class="icon solid fa-envelope"></a></li>
+                                    </ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>My Computer Science Degree - In Python</h1>
+									</header>
+
+                                    <span class="image main"><img src="images/underConstruction.jpeg" alt="under construction"/></span>
+                                    <h2>Please mind the dust </br> Page is under construction!</h2>
+									<!--<span class="image main"><img src="images/keyboard.jpeg" alt="keyboard image" /></span>
+
+                                    <hr class="major" />
+                                    <h2>Contents</h2>
+                                    <h3></h3>
+                                    <h3></h3>
+                                    <h3></h3>
+                                    <h3><a href="#LettersOfRec">Advice on Letters of Recommendation</a></h3>
+									<hr class="major" />
+
+									<h2>Most Recent Article</h2>
+									<p>I requested this project to learn how to web-scrape, how Really Simple Syndication (RSS) functions as a protocol, and to improve my skills at building functional websites.
+                                        To accomplish these goals, my plan was to:</p>
+                                    <ul>
+                                        <li>Create a WordPress web page</li>
+                                        <li>Host the output from RSS feeds for news on the page</li>
+                                        <li>Eliminate redundant news articles from the feed (data cleaning)</li>
+                                        <li>Display feeds as either weblinks with timestamps or as "glimpses" with short summary and data showing</li>
+                                    </ul>
+                                    
+                                    <p>I was ambitious and hoped to be able to go further with added functionality to have the website:</p>
+                                    <ul>
+                                        <li>Scanning feeds using Locality Sensitive hashing to eliminate articles published by a secondary news source</li>
+                                        <li>Aggregating 2x daily feeds into "Top News" summaries using Natural Language Processing</li>
+                                        <li>Publishing summaries to subscribers</li>
+                                        <li>Adding options for selective news types such as "political news," "economic news," etc.</li>
+                                        <li>Adding options for simple search terms to gather specific news items</li>
+                                        <li>Auto-archiving news articles</li>
+                                        <li>Retrieving feeds from additional news sources such as Reddit, Twitter, etc.</li>
+                                    </ul>
+                                        
+                                    <p>My planned deliverables were:</p>
+                                    <ul>
+                                        <li>Create a WordPress web page</li>
+                                        <li>Host the output from RSS feeds for news on the page</li>
+                                        <li>Eliminate redundant news articles from the feed (data cleaning)</li>
+                                        <li>Display feeds as either weblinks with timestamps or as "glimpses" with short summary and data showing</li>
+                                    </ul>
+                                        
+
+									<hr class="major" />
+
+									<h2>Less Recent Article</h2>
+									<p>Before I started the project I had already looked at the NewsNow.com website and how they were displaying RSS feed items as Article Title (as a link to the article), Publication Name, and Publication TimeDate. I had also started to gather /RSS and /FEED addresses to over 60 news publishers in anticipation of using several.</p>
+                                    <p>Initially, I researched how to setup a WordPress website, to I could start getting a template page online to pull information using JavaScript and display scraped information using HTML and CSS. I quickly discovered that there is a large difference between Wordpress.org and Wordpress.com. While I could (and did) setup a template WordPress (.com) page in minutes, I found out that all plugins and actions require a paid account and, if plugins that did exactly what I wanted (to scrape from a large number of sites) were not available, I would have to build my own plugin in PHP and submit the plugin to WordPress.com for review (which could take weeks) before I could use it. Similarly, WordPress.org would require extensive work in PHP to build my scraping and display functions, though WordPress.org does not have a required fee to use actions of plugins.</p>
+                                    <p>I next moved to GitHub, where I discovered that GitHub offers free hosting through GitHub Pages for one repository per account. I found a basic webpage template and created a new repository with configured settings to deploy my website. The template successfully deployed, and I used a few available services to send me pre-formatted news articles, most of which I was able to easily add to the pages, but with major drawbacks. For each of the services I could find, all had limitations in the number of articles and the number of sources they were able to provide to me and the services would not work well together. At this point, unless I decided to use several pay-to-use services from multiple outlets, my only other option was to build my own tool.</p>
+                                    <p>I moved on to attempt using a few older tutorials I'd found to try and scrape data from the publishers RSS pages directly. Nothing I tried to do worked following that thread and I was able to determine the problem was Cross-Origin Resource Sharing (CORS). Essentially, after 2018, easy scraping using JavaScript was disabled with the implementation of CORS, which blocks resource requests from any domain which is not its own (without some very extensive configurations and services).</p>
+                                    <p>This pushed me to using a full programming language with libraries built to support web-scraping, namely, Python. I found a library called lxml for Python which allowed me to leverage the requests library to scrape everything on the URL passed and then “packaged” the material as an xml object. Using this method, I was able to scrape any RSS page and somewhat successfully parse the data I needed into a dataframe (with some difficulties due to publishers not following a consistent standard for RSS pages).</p>
+                                    <p>When I went to configure my Python script to send its dataframe to my webpage I discovered that GitHub Pages are static-only and will not accept configuration as a dynamic web application. I researched several other web-hosting platforms, including Heroku, Docker, Render, and PythonAnywhere, uploading my script and attempting to publish my pages on each until I discovered that all required Python v3.5 or later and my program had been written on Python v2.7. I upgraded to Python v3.8 and attempted to run my scripts locally and lxml was entirely broken.</p>
+                                    <p>I looked for another library to use with Python v3.5 or later and found BeautifulSoup, which works much better and more reliably than lxml, and then tried to publish again. This time, I found out that I needed an application framework and not a separate traditional HTML webpage. After some research, I found out that Python has two main web frameworks; Django and Flask. After looking into both, I found that Flask is more thoroughly documented and a simpler framework to use. I setup Flask and ran my scripts in a Flask containerized virtual environment and then built a minimal web app to display my results. I was able to display all 30 of the news publishers I tried, but pruned down to 10 publishers to display on the web app, then pushed my code to my GitHub repo and linked the repo to my PythonAnywhere account and published the web app.</p>
+                                    
+
+									<hr class="major" />
+
+									<h2>Less Recent Article</h2>
+									<p>I have a currently running web-scraping RSS feed web app located <a href="http://bburbank.pythonanywhere.com/" target="_blank">here</a> which is only able to display results from two news publishers. 
+                                        I believe the reason the other publishers won't properly connect when my script tries to initiate requests is the same CORS issue I'd previously run into. 
+                                        My web app does have a link to view the dataframe scraped from the publishers' RSS pages. 
+                                        It has another link to view a formatted Flask-generated html table with hyperlinks to the scraped articles and their titles and publishers' names sorted in descending chronological order. 
+                                        The app also has links to my GitHub repo and this project report.</p>
+                                    
+
+                                    <hr class="major" />
+
+                                    <h2><a id="LettersOfRec">Advice on Letters of Recommendation</a></h2>
+                                    <span class="image right"><img src="images/adviceOnLetters.jpeg" alt="Article Image" /></span>
+                                    <a href="https://www.linkedin.com/pulse/advice-letters-recommendation-ben-burbank/" target="_blank">Read article on LinkedIn</a>
+
+                                    
+                                    
+                                    <p>As a technical writer and as a resume & vocational preparation consultant, I often get questions about letters of recommendation. 
+                                        Clients ask how to get them, how to use them, and what to do if the recommendation doesn't sound as good as expected. 
+                                        Here's a little of the advice I have given in the past which I hope will prove useful on this platform.</p>
+
+                                    <h4>Reasons for request</h4>
+                                    <p>There are many reasons why you might want to request a letter of recommendation (LoR) from a colleague or supervisor. 
+                                        Try not to think of a LoR as only being a one-shot document used to gain a particular position. 
+                                        A LoR can be just as useful during a salary review or a promotion board as for a new position. 
+                                        Also, a LoR which is written more generally than you might think of as beneficial can come in useful as additional support for a very specific LoR.</p>
+                                        
+                                    <h4>How to ask for a LoR</h4>
+                                    <p>Depending on the person you are asking, there are several methods available. 
+                                        If you know the person very well, and have performed well around them doing the same functions you'd like to have in the LoR, simply word a polite email, phone, or in-person question about their willingness to write a LoR for you. 
+                                        As some people feel uncomfortable writing recommendations, it's always best to ask if they would feel comfortable writing one for you. 
+                                        This is a very elegant way of leaving the other person an "out." 
+                                        Also, be sure to ask for a response even if they do not wish to write the recommendation for you so that you "can begin to look for an alternate recommendation."</p>
+                                    <p>In the request, you should include the date you would like to receive the LoR. 
+                                        The expected date should be set for at least 7-10 days out from your request. 
+                                        If you haven't heard back after 3-4 days, you should follow up with a question about any additional support you might be able to offer. 
+                                        Always be gracious, even if refused, and be ready to meet with the person if they would like to discuss your particular LoR needs. 
+                                        If the person you've asked doesn't have much experience writing recommendations, you may want to include a short list of things you think would be appropriate to include in the LoR.</p>
+                                    <p>Whether or not you receive a LoR, ask the person if you can use them as a personal reference. 
+                                        It is often assumed that a person willing to write a LoR is also willing to be contacted as a personal reference, but it's best to ask. 
+                                        Within 3-4 days after receiving a LoR or a refusal, send a short thank you note to the person. It will be appreciated.</p>
+                                        
+                                    <h4>Usage or non-usage</h4>
+                                    <p>While a potential position you're applying for may ask for Letters of Reference to be sent directly to them from the letter writer, most positions simply ask you to provide them yourself. 
+                                        This allows you the opportunity to select from any recommendations you have on hand and use only those you feel best represent your needs. 
+                                        If in doubt about whether to use a LoR or not, err on the side of providing it.</p>
+                                    <p>Thank you for reading and good luck!</p>
+                                        
+                                    <h4>Resources:</h4>
+                                    <a href="https://www.monster.com/career-advice/article/ask-letter-recommendation">https://www.monster.com/career-advice/article/ask-letter-recommendation</a>
+                                    <a href="http://edityour.net/email-templates-for-asking-for-a-letter-of-recommendation/">http://edityour.net/email-templates-for-asking-for-a-letter-of-recommendation/</a>
+                                    <a href="https://www.petersons.com/college-search/letter-recommendation-how-ask.aspx#/sweeps-modal">https://www.petersons.com/college-search/letter-recommendation-how-ask.aspx#/sweeps-modal</a>
+                                    <a href="https://www.thebalance.com/how-to-write-a-letter-of-recommendation-2060460">https://www.thebalance.com/how-to-write-a-letter-of-recommendation-2060460</a>
+                                    <a href="https://www.themuse.com/advice/heres-a-template-to-write-a-perfect-and-personalized-letter-of-recommendation">https://www.themuse.com/advice/heres-a-template-to-write-a-perfect-and-personalized-letter-of-recommendation</a>-->
+                                        
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+                <div id="sidebar">
+                    <div class="inner">
+
+                        <!-- Search -->
+                            <!--<section id="search" class="alt">
+                                <form method="post" action="#">
+                                    <input type="text" name="query" id="query" placeholder="Search" />
+                                </form>
+                            </section>-->
+
+                        <!-- Menu -->
+                            <nav id="menu">
+                                <header class="major">
+                                    <h2>Menu</h2>
+                                </header>
+                                <ul>
+                                    <li><a href="index.html">Homepage</a></li>
+                                    <li><a href="resume.html">Resume</a></li>
+                                    <li>
+                                        <span class="opener">Projects</span>
+                                        <ul>
+                                            <li><a href="proj_webscrape.html">Web Scraper / RSS</a></li>
+                                            <li><a href="proj_nlp.html">Natural Language Processing</a></li>
+                                            <li><a href="proj_csInPython.html">My Computer Science Degree - In Python</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="articles.html">Articles</a></li>
+                                    <!--<li><a href="elements.html">Elements</a></li>
+                                    <li>
+                                        <span class="opener">Submenu</span>
+                                        <ul>
+                                            <li><a href="#">Lorem Dolor</a></li>
+                                            <li><a href="#">Ipsum Adipiscing</a></li>
+                                        </ul>
+                                    </li>-->
+                                    
+                                </ul>
+                            </nav>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Articles</h2>
+                                </header>
+                                <div class="mini-posts">
+                                    <!--<article>
+                                        <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+                                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                    </article>
+                                    <article>
+                                        <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+                                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                    </article>-->
+                                    <article>
+                                        <a href="/articles.html#LettersOfRec" class="image"><img src="images/adviceOnLetters.jpeg" alt="" /></a>
+                                        <p>Advice on Letters of Recommendation</p>
+                                    </article>
+                                </div>
+                                <!--<ul class="actions">
+                                    <li><a href="articles.html" class="button">More</a></li>
+                                </ul>-->
+                            </section>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Get in touch</h2>
+                                </header>
+                                <ul class="contact">
+									<li class="icon solid fa-envelope"><a href="mailto:">bburbank14@ewu.edu</a></li>
+									<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/benjaminburbank/" target="_blank">linkedin.com/in/benjaminburbank/</a></li>
+									<li class="icon solid fa-home">Spokane, WA</li>
+								</ul>
+                            </section>
+
+                        <!-- Footer -->
+                            <footer id="footer">
+								<br class="copyright">&copy; Ben Burbank. All rights reserved. </br> Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+                    </div>
+                </div>
+
+        </div>
+
+    <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
